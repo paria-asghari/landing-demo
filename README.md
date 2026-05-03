@@ -25,4 +25,10 @@ This project showcases an assistant that helps users book and manage real-world 
 •⁠  ⁠*Icons:* Heroicons / Custom SVG
 •⁠  ⁠*State Management:* React Hooks (optional: Zustand / Redux)
 
+## 📧 Contact
+
+For questions or support, please contact the development team.
+
 ---
+
+*Built with ❤️ for the construction industry*
