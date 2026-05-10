@@ -39,22 +39,22 @@ const topRatedGames = [
 export default function GamesPage() {
     return (
         <main className="min-h-screen pt-20 pl-64 bg-slate-900">
-            <GameSection title="Popular" gridCols="cols5" hasDots>
+            <GameSection title="Popular" gridCols="cols5" hasDots category="popular">
                 {popularGames.map((game, index) => (
                     <PopularGame game={game} key={index} />
                 ))}
             </GameSection>
-            <GameSection title="New Games" gridCols="cols5" hasDots>
+            <GameSection title="New Games" gridCols="cols5" hasDots category="newGames">
                 {newGames.map((game, index) => (
                     <PopularGame game={game} key={index} />
                 ))}
             </GameSection>
-            <GameSection title="Trending Now" gridCols="cols3" hasDots>
+            <GameSection title="Trending Now" gridCols="cols3" hasDots category="trending">
                 {trendingGames.map((game, index) => (
                     <TrandingGame game={game} num={index} key={index} />
                 ))}
             </GameSection>
-            <GameSection title="Top Rated" gridCols="cols2" hasDots>
+            <GameSection title="Top Rated" gridCols="cols2" hasDots category="topRated">
                 {topRatedGames.map((game, index) => (
                     <ToprateGame game={game} num={index} key={index} />
                 ))}

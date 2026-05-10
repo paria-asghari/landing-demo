@@ -63,24 +63,18 @@ export default function CasinoPage() {
             </div>
 
             {/* Top Casino Games Section */}
-            <GameSection title="Top Casino Games" gridCols="cols4" hasDots>
+            <GameSection title="Top Casino Games" gridCols="cols4" hasDots category="topCasino">
                 {topCasinoGames.map((game, index) => (
                     <PopularGame game={game} key={index} baseUrl="casino" />
                 ))}
             </GameSection>
 
             {/* Live Casino Section */}
-            <section className="mb-8 p-6">
-                <div className="flex items-center gap-2 mb-4">
-                    <h2 className="text-blue-400 text-xl font-bold">Live Casino</h2>
-                    <span className="bg-green-500 text-white rounded-full px-2 py-0.5 text-xs">Live</span>
-                </div>
-                <GameSection gridCols="cols4" hasDots>
-                    {liveCasinoGames.map((game, index) => (
-                        <PopularGame game={game} key={index} baseUrl="casino" />
-                    ))}
-                </GameSection>
-            </section>
+            <GameSection title="Live Casino" badge={{ name: "Live", color: "green-500" }} gridCols="cols4" hasDots category="liveCasino">
+                {liveCasinoGames.map((game, index) => (
+                    <PopularGame game={game} key={index} baseUrl="casino" />
+                ))}
+            </GameSection>
         </div>
     );
 }

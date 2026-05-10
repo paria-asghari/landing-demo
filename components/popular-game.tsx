@@ -22,6 +22,7 @@ export default function PopularGame({ game, baseUrl = "games" }: { game: Game; b
                     src={game.src}
                     alt={game.name}
                     fill
+                    sizes="(max-width: 768px) 100vw, 25vw"
                     className="object-cover group-hover:scale-110 transition-transform duration-300"
                 />
             </div>
