@@ -38,7 +38,7 @@ const topRatedGames = [
 
 export default function GamesPage() {
     return (
-        <main className="min-h-screen pt-20 pl-64 bg-slate-900">
+        <main className="min-h-screen pt-20  bg-slate-900">
             <GameSection title="Popular" gridCols="cols5" hasDots category="popular">
                 {popularGames.map((game, index) => (
                     <PopularGame game={game} key={index} />

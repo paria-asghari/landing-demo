@@ -18,7 +18,7 @@ const liveCasinoGames = [
 
 export default function CasinoPage() {
     return (
-        <div className="min-h-screen bg-slate-900 text-white pt-20 pl-64">
+        <div className="min-h-screen bg-slate-900 text-white pt-20">
             {/* Hero Section - Full Width */}
             <div className="flex h-87.5 mx-2 my-2 gap-2">
                 {/* Image - 2/3 of page */}

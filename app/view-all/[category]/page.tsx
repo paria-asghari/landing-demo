@@ -15,7 +15,7 @@ export default function ViewAllPage() {
     const title = categoryTitles[category] || "All Games";
 
     return (
-        <main className="min-h-screen pt-20 pl-64 bg-slate-900">
+        <main className="min-h-screen pt-20 bg-slate-900">
             <button onClick={() => router.back()} className="text-blue-400 inline-flex items-center gap-2 ml-6 mt-6 cursor-pointer bg-transparent border-none">
                 <ChevronLeft size={20} />
                 <span>Back</span>

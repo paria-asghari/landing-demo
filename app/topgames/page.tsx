@@ -82,7 +82,7 @@ const topGameTitles = [
 
 export default function TopGamesPage() {
     return (
-        <div className="min-h-screen bg-slate-900 text-white pt-20 pl-64 p-8">
+        <div className="min-h-screen bg-slate-900 text-white pt-20 p-8">
             <Link href="/" className="text-blue-400 inline-flex items-center gap-2 no-underline mb-8 px-4">
                 ← Back to Home
             </Link>

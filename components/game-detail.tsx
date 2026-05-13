@@ -17,7 +17,7 @@ export function GameDetail({ title, image, reviews }: GameDetailProps) {
     ];
 
     return (
-        <div className="min-h-screen bg-slate-900 text-white pt-20 pl-64 p-8">
+        <div className="min-h-screen bg-slate-900 text-white pt-20 p-8">
             <div className="flex items-center gap-2 mb-8 px-4 text-sm">
                 <Link href="/" className="text-blue-400 hover:text-white no-underline">Home page</Link>
                 <ChevronRight size={14} className="text-blue-400" />

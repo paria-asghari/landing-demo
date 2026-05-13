@@ -18,13 +18,13 @@ const topGameTitles = [
 
 export default function GamesCard() {
     return (
-        <>
-            <div className="flex items-center mx-6 mt-8">
+        <div className="w-full">
+            <div className="flex items-center mt-8">
                 <div className="h-px flex-1 bg-blue-600" />
                 <span className="px-4 text-sm font-semibold text-blue-600">Top Game</span>
                 <div className="h-px flex-1 bg-blue-600" />
             </div>
-            <div className="grid grid-cols-4 gap-4 mx-6 mt-6 pb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6 pb-8 mx-6">
                 {topGames.map((game, index) => (
                     <Link
                         href={`/topgames/${game.slug}?index=${index}`}
@@ -45,7 +45,7 @@ export default function GamesCard() {
                     </Link>
                 ))}
             </div>
-            <div className="flex justify-end mx-6 pb-8">
+            <div className="flex justify-end pb-8 mr-6">
                 <Link
                     href="/topgames"
                     className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full transition-colors text-sm"
@@ -53,6 +53,6 @@ export default function GamesCard() {
                     View More
                 </Link>
             </div>
-        </>
+        </div>
     );
 }

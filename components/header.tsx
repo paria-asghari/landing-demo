@@ -2,8 +2,7 @@
 
 import { Search, MessageCircle } from "lucide-react";
 import { Button } from "@heroui/react";
-import { LoginModal } from "./auth-modals";
-import { SignUpModal } from "./signup-modal";
+import Link from "next/link";
 
 export default function Header() {
   return (
@@ -25,8 +24,18 @@ export default function Header() {
           <Button isIconOnly className="bg-slate-700 hover:bg-slate-600 text-2xl">
             🇬🇧
           </Button>
-          <LoginModal />
-          <SignUpModal />
+          <Link
+            href="/login"
+            className="bg-slate-800 text-white border-2 border-blue-400 hover:bg-slate-700 font-semibold rounded-full px-6 py-2"
+          >
+            Login
+          </Link>
+          <Link
+            href="/signup"
+            className="bg-amber-500 text-slate-800 border-2 border-amber-500 hover:bg-amber-400 font-semibold rounded-full px-6 py-2"
+          >
+            Sign Up
+          </Link>
         </div>
       </div>
     </header>

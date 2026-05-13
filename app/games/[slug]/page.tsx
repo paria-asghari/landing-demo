@@ -4,6 +4,7 @@ import { Star, ChevronLeft } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { use } from "react";
+import NotFound from "@/components/not-found";
 
 const gamesData: Record<string, {
     src: string;
@@ -1009,21 +1010,11 @@ export default function GameDetailPage({ params }: { params: Promise<{ slug: str
     const game = gamesData[slug];
 
     if (!game) {
-        return (
-            <main className="min-h-screen pt-20 pl-64 bg-slate-900 flex items-center justify-center">
-                <div className="text-center">
-                    <h1 className="text-3xl font-bold text-white mb-4">Game Not Found</h1>
-                    <button onClick={() => router.back()} className="text-blue-400 inline-flex items-center gap-2 cursor-pointer bg-transparent border-none">
-                        <ChevronLeft size={20} />
-                        <span>Back</span>
-                    </button>
-                </div>
-            </main>
-        );
+        return <NotFound title="Game Not Found" />;
     }
 
     return (
-        <main className="min-h-screen pt-20 pl-64 bg-slate-900 p-8">
+        <main className="min-h-screen pt-20 bg-slate-900 p-8">
             <button onClick={() => router.back()} className="text-blue-400 inline-flex items-center gap-2 mb-8 cursor-pointer bg-transparent border-none">
                 <ChevronLeft size={20} />
                 <span>Back</span>

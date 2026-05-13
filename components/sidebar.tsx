@@ -17,10 +17,10 @@ export function Sidebar() {
     ]
 
     const footerLinks = [
-        { label: "About Us", href: "/about-us?page=about" },
-        { label: "Payments", href: "/about-us?page=payments" },
-        { label: "Privacy Policy", href: "/about-us?page=privacy" },
-        { label: "Terms & Conditions", href: "/about-us?page=terms" },
+        { label: "About Us", href: "/pages/about" },
+        { label: "Payments", href: "/pages/payments" },
+        { label: "Privacy Policy", href: "/pages/privacy" },
+        { label: "Terms & Conditions", href: "/pages/terms" },
     ]
 
     const socialIcons = [X, MessageCircle, Send, Play]
@@ -51,9 +51,15 @@ export function Sidebar() {
                 ))}
             </div>
             <div className="w-48 h-px bg-blue-600 mt-4" />
-            <div className="flex flex-col items-start gap-2 mt-4 text-blue-600 text-sm">
+            <div className="flex flex-col items-start gap-2 mt-4 text-slate-400 text-sm">
                 {footerLinks.map((link) => (
-                    <a key={link.label} href={link.href} className="hover:text-blue-400 transition-colors">{link.label}</a>
+                    <a
+                        key={link.label}
+                        href={link.href}
+                        className={`hover:text-amber-400 transition-colors px-3 py-2 rounded-lg w-full ${isActive(link.href) ? "text-amber-400" : ""}`}
+                    >
+                        {link.label}
+                    </a>
                 ))}
             </div>
             <div className="flex items-center gap-3 mt-auto pt-8 pb-8 ml-auto mr-auto">
