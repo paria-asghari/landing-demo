@@ -1,9 +1,16 @@
+"use client";
+
+import Link from "next/link";
+
 interface GameSectionProps {
     title?: string;
     gridCols?: "cols2" | "cols3" | "cols4" | "cols5";
     hasViewAll?: boolean;
     hasDots?: boolean;
     children: React.ReactNode;
+    badge?: { name: string, color: string }
+    viewUrl?: string;
+    category?: string;
 }
 
 const gridClasses = {
@@ -16,21 +23,30 @@ const gridClasses = {
 export default function GameSection({
     title,
     gridCols = "cols5",
+    badge,
     hasViewAll = true,
+    viewUrl,
+    category,
     hasDots = false,
     children,
 }: GameSectionProps) {
+    const href = viewUrl || (category ? `/view-all/${category}` : "#");
     return (
         <section className="mb-8 p-6">
-            {title && <h2 className="text-blue-400 text-xl font-bold mb-4">{title}</h2>}
+
+            <div className="flex items-center gap-2 mb-4">
+                {title && <h2 className="text-blue-400 text-xl font-bold mb-4">{title}</h2>}
+                {badge && badge.name && badge.color && <span className={`bg-${badge.color} text-white rounded-full px-2 py-0.5 text-xs`}>{badge.name}</span>}
+
+            </div>
             <div className={`grid ${gridClasses[gridCols]} gap-4`}>
                 {children}
             </div>
             {hasViewAll && (
                 <div className="flex justify-end mt-4">
-                    <button className="bg-blue-500 text-white hover:bg-blue-600 font-semibold rounded-full px-6 py-2">
+                    <Link href={href} className="bg-blue-500 text-white hover:bg-blue-600 font-semibold rounded-full px-6 py-2">
                         View All
-                    </button>
+                    </Link>
                 </div>
             )}
             {hasDots && (

@@ -9,12 +9,12 @@ export default function TableWinner() {
 
     return (
         <>
-            <div className="flex items-center mx-6 mt-8 pb-8">
+            <div className="flex items-center mt-8 pb-8">
                 <div className="flex-1 h-px bg-blue-600" />
                 <span className="px-4 text-sm font-semibold text-blue-600">Live Winners</span>
                 <div className="flex-1 h-px bg-blue-600" />
             </div>
-            <div className="mx-6 pb-8">
+            <div className="pb-8">
                 <table className="w-full text-white">
                     <thead>
                         <tr className="border-b border-slate-600">

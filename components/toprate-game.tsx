@@ -1,7 +1,14 @@
 import { Star } from "lucide-react";
 import Image from "next/image";
 
-export default function ToprateGame({ game, num }) {
+interface Game {
+    src: string;
+    name: string;
+    rate: number;
+    [key: string]: unknown;
+}
+
+export default function ToprateGame({ game, num }: { game: Game; num: number }) {
     return (
         <a
 
